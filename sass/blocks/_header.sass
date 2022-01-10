@@ -1,0 +1,176 @@
+.wrap
+  // max-width: 1440px
+  // margin: auto
+  // position: relative
+  // left: 50px
+.header
+  font-family: 'NotoSerif-Bold'
+  // margin-top: 10px
+  height: 100vh
+  position: relative
+  &__wrapper
+    position: absolute
+    // margin: auto
+    display: flex
+    // align-items: center
+    // justify-content: space-between
+
+    z-index: 99
+  &__slider //slider
+    &--container
+      position: relative
+      overflow: hidden
+      width: 100%
+      height: 100vh
+    &--sidebar
+      height: 100%
+      width: 35%
+      position: absolute
+      top: 0
+      left: 0
+      transition: transform 0.5s ease-in-out
+      & > div
+        position: relative
+        left: 40px
+        height: 100%
+        width: 100%
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: center
+        color: #fff
+      & h1
+        display: flex
+        align-items: center
+        width: 350px
+        font-size: 35px
+        line-height: 133.69%
+        color: rgba(255, 255, 255, 0.6)
+        // font-weight: 600
+      & h3
+        font-size: 17px
+        color: #FFFFFF
+        margin-bottom: 125px
+        font-family: 'NotoSerif-Regular'
+      & a
+        background: #FFFFFF
+        box-shadow: 35px 5px 40px rgba(255, 255, 255, 0.35)
+        border-radius: 15px
+        padding: 10px 37px 10px 37px
+        color: rgba(190, 0, 0, 0.8)
+        font-size: 17px
+        line-height: 133.69%
+        font-family: 'Verdana-Bold'
+
+    &--main-slide
+      height: 100%
+      position: absolute
+      top: 0
+      left: 35%
+      width: 65%
+      transition: transform 0.5s ease-in-out
+      & > div
+        background-repeat: no-repeat
+        background-size: cover
+        background-position: center center
+        height: 100%
+        width: 100%
+    &--down-button
+      transform: translateX(-100%)
+      // border-top-left-radius: 5px
+      // border-bottom-left-radius: 5px
+      border-radius: 30px 0px 0px 0px
+      &:hover
+        color: white
+    &--up-button
+      // transform: translateY(-100%)
+      // border-top-right-radius: 5px
+      // border-bottom-right-radius: 5px
+
+      border-radius: 0px 0px 30px 0px
+  &__links
+    position: absolute
+    display: flex
+    flex-direction: column
+    top: 45%
+    left: 40px
+    & a
+      padding-bottom: 25px
+    & img
+      width: 30px
+      height: 30px
+.items
+
+.slider-button
+  background: #312D24
+  border: none
+  color: #aaa
+  cursor: pointer
+  font-size: 16px
+  padding: 20px
+  &:hover
+    color: white
+  &:focus
+    outline: none
+
+.slider-button
+  position: absolute
+  left: 35%
+  top: 50%
+  z-index: 100
+
+.img
+  object-fit: cover
+  width: 100%
+  // height: 100vh
+
+.img-up
+  background: url('../img/button/up.svg') no-repeat
+  width: 24px
+  height: 20px
+.img-down
+  background: url('../img/button/down.svg') no-repeat
+  width: 24px
+  height: 20px
+
+//NAV
+.nav-menu
+  margin-top: 50px
+  display: flex
+  // justify-content: space-between
+  font-size: 15px
+  color: white
+  // position: relative
+  // left: 200px
+  margin-left: 200px
+
+  &__item
+    color: white
+    &--time
+      display: block
+      width: 90px
+      text-align: center
+      font-size: 13px
+      font-family: 'Verdana-Regular'
+
+    &--services
+      color: white
+      margin-left: 460px
+    &--geo
+      color: white
+      margin-left: 30px
+
+    &--tel
+      margin-left: 90px
+      display: flex
+      & img
+        // float: left
+        // margin-left: 80px
+        // vertical-align: top
+      & span
+        // vertical-align: middle
+        margin-left: 11px
+
+.color
+  color: white
+  // padding-right: 200px
