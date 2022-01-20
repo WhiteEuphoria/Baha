@@ -1,19 +1,21 @@
 @media (max-width: 1450px)
   // .wrap
   //   max-width: 1240px
+
   .nav-menu
-    margin-left: 150px
     &__item
       &--services
         color: white
-        margin-left: 400px
+        margin-left: 390px
 @media (max-width: 1340px)
   .nav-menu
-    margin-left: 150px
     &__item
       &--services
         color: white
-        margin-left: 320px
+        margin-left: 310px
+  .slide
+    & div
+      width: 70%
 
 @media (max-width: 1280px)
   .header
@@ -25,23 +27,27 @@
           & h3
             font-size: 16px
           & a
-            padding: 10px 35px 10px 35px
-            font-size: 15px
+  .nav-menu
+    &__item
+      &--services
+        color: white
+        margin-left: 290px
+
+  .btn
+    padding: 10px 35px 10px 35px
+    font-size: 15px
   .img
     height: 100vh
   .slide
     & h3
       font-size: 20px
-@media (max-width: 1270px)
-  .nav-menu
-    margin-left: 100px
 
 @media (max-width: 1210px)
   .nav-menu
     &__item
       &--services
         color: white
-        margin-left: 260px
+        margin-left: 230px
 
 @media (max-width: 1150px)
   .nav-menu
@@ -52,7 +58,7 @@
     &__item
       &--services
         color: white
-        margin-left: 220px
+        margin-left: 210px
   .header
     &__slider //slider
       &--sidebar
@@ -75,11 +81,9 @@
     &__item
       &--services
         color: white
-        margin-left: 180px
+        margin-left: 160px
 
 @media (max-width: 1040px)
-  .nav-menu
-    margin-left: 40px
   .header
     &__slider //slider
       &--sidebar
@@ -90,7 +94,7 @@
           font-size: 15px
 
 @media (max-width: 1024px)
-  .nav-menu
+  .menu
     display: none
   .services
     &--bg
@@ -103,6 +107,13 @@
       font-size: 17px
     & p
       font-size: 17px
+      padding-bottom: 15px
+      width: 230px
+    & div
+      width: 90%
+      flex-direction: column
+    & span
+      font-size: 14px
 @media (max-width: 991px)
   .header
     &__slider //slider
@@ -124,15 +135,8 @@
         transition: transform 0.5s ease-in-out
       &--down-button
         transform: translateX(-100%)
-      // border-top-left-radius: 5px
-      // border-bottom-left-radius: 5px
         border-radius: 30px 0px 0px 0px
         position: absolute
-
-      &--up-button
-      // transform: translateY(-100%)
-      // border-top-right-radius: 5px
-      // border-bottom-right-radius: 5px
   .slider-button
     position: absolute
     left: 45%
@@ -147,9 +151,324 @@
     width: 16px
     height: 14px
     border-radius: 0px 0px 30px 0px
+
+@media (max-width: 900px)
   .slide
     & h3
-      left: 20%
+      left: -70px
       top: 120px
+@media (max-width: 810px)
+  .services
+    &__width
+      max-width: 600px
+  .line
+    width: 150px
 
-// @media (max-width: 768px)
+@media (max-width: 768px)
+  .header
+    &__slider //slider
+      &--container
+        position: relative
+        overflow: hidden
+        width: 100%
+        height: 70vh
+      &--sidebar
+        height: 100%
+        width: 50%
+        position: absolute
+        top: 0
+        left: 0
+        transition: transform 0.5s ease-in-out
+        & > div
+          top: 100px
+          left: 0
+        & h1
+          width: 290px
+          font-size: 28px
+        & h3
+          font-size: 16px
+        & a
+          display: none
+      &--main-slide
+        left: 50%
+        width: 50%
+    &__adaptive-buttons
+      display: flex
+      flex-direction: column
+      margin: auto
+      // width: 100vh
+      height: 30vh
+      justify-content: center
+      align-items: center
+      &--btn
+        margin-top: 30px
+        margin-bottom: 50px
+    &__links
+      display: none
+  .button
+    font-family: 'Verdana-Bold'
+    background: #FFFFFF
+    box-shadow: 17px 5px 40px rgba(255, 255, 255, 0.35)
+    border-radius: 15px
+    color: rgba(190, 0, 0, 0.8)
+    font-size: 14px
+    padding: 16px 18px 16px 18px
+
+  .links
+    width: 250px
+    display: flex
+    justify-content: space-around
+    & img
+      width: 27px
+      height: 27px
+  .slider-button
+    left: 50%
+    top: 90%
+  .services--bg
+    margin-bottom: 20px
+
+  .container
+    margin-top: 20px
+  .slide
+    cursor: default
+  .slide
+    &.active
+      & h3
+        animation: vis 2s forwards
+  .footer
+    margin-top: 40px
+    &__map
+      margin-top: 50px
+    &__form
+      position: static
+      margin: auto
+    &__rec
+      & a
+        left: 30%
+        top: 30%
+      &--up
+        display: none
+      &--link
+        display: flex
+      // & img,span
+      //   display: none
+      // & h4
+      //   display: flex
+
+@media (max-width: 750px)
+  .header
+    &__slider //slider
+      &--container
+      &--sidebar
+        & > div
+          top: 100px
+          // left: 40px
+        & h1
+          width: 250px
+          font-size: 25px
+        & h3
+          font-size: 16px
+@media (max-width: 610px)
+  .header
+    &__slider //slider
+      &--container
+      &--sidebar
+        & > div
+          top: 100px
+          left: 30px
+        & h1
+          width: 230px
+          font-size: 25px
+        & h3
+          font-size: 14px
+  .logo__img
+    width: 140px
+    height: 140px
+  .services
+    &__width
+      max-width: 420px
+    &__title
+      font-size: 18px
+  .slide
+    & h3
+      font-size: 12px
+      left: -70px
+      top: 120px
+    & h5
+      font-size: 14px
+    & p
+      font-size: 15px
+      width: 205px
+    & span
+      font-size: 13px
+  .slide
+    &.active
+      & h3
+        font-size: 17px
+  .footer
+    &__links
+      display: none
+@media (max-width: 520px)
+  .slide
+    & div
+      padding: 30px 20px 30px 20px
+    & p
+      font-size: 15px
+      width: 205px
+    & span
+      font-size: 13px
+@media (max-width: 476px)
+  .header
+    &__slider //slider
+      &--container
+      &--sidebar
+        & > div
+          top: 100px
+          left: 0
+        & h1
+          width: 160px
+          font-size: 23px
+        & h3
+          font-size: 13px
+  .button
+    font-size: 13px
+    padding: 15px 17px 15px 17px
+
+  .links
+    width: 220px
+    display: flex
+    justify-content: space-around
+  .slide
+    & h3
+      font-size: 12px
+      left: -80px
+      top: 120px
+@media (max-width: 440px)
+  .header
+    &__adaptive-buttons
+      &--btn
+        margin-top: 0
+        margin-bottom: 40px
+  .services
+    &--wrapper
+      height: 75vh
+    &__width
+      max-width: 320px
+  .slide
+    width: 100%
+    height: 50vh
+    & h3
+    & h5
+      top: 85px
+      font-size: 12px
+    & div
+      top: 115px
+      padding: 15px 12px 15px 12px
+    & p
+      width: 150px
+      font-size: 14px
+    & span
+      padding: 7px 8px 9px 7px
+      font-size: 13px
+  .slide
+    &.active
+      & h3
+        width: 160px
+        top: 40px
+        font-size: 15px
+  .footer
+    &__form
+      width: 310px
+      height: 400px
+    &__map
+      width: 100%
+      height: 80vh
+    &__wrap
+      height: 20vh
+    &__rec
+      border-radius: 0px 0px 0px 70px
+      width: 75px
+      height: 75px
+
+  .form
+    & h3
+      width: 240px
+      font-size: 19px
+      padding-top: 25px
+      padding-bottom: 30px
+    &__input
+      background: rgba(0, 0, 0, 0.2)
+      border: 1px solid #FFFFFF
+      width: 240px
+      height: 37px
+      margin-bottom: 20px
+      border-radius: 5px
+      font-size: 14px
+
+    &__text
+      background: rgba(0, 0, 0, 0.2)
+      border: 1px solid #FFFFFF
+      margin-bottom: 25px
+      border-radius: 5px
+      width: 240px
+      height: 100px
+      font-size: 14px
+    &__btn
+      font-family: 'Verdana-Bold'
+      background: #FFFFFF
+      box-shadow: 35px 5px 40px rgba(255, 255, 255, 0.35)
+      border-radius: 5px
+      padding: 6px 72px 6px 72px
+      color: rgba(190, 0, 0, 0.8)
+      font-size: 15px
+      line-height: 21px
+@media (max-width: 380px)
+  .header
+    &__slider //slider
+      &--sidebar
+        width: 50%
+        & > div
+          top: 100px
+        & h1
+          width: 140px
+          font-size: 21px
+        & h3
+          font-size: 12px
+      &--main-slide
+        left: 50%
+        width: 50%
+  .slider-button
+    left: 50%
+  .button
+    font-size: 12px
+    padding: 13px 15px 13px 15px
+
+  .links
+    width: 180px
+    display: flex
+    justify-content: space-around
+    & img
+      width: 24px
+      height: 24px
+
+@media (max-width: 350px)
+  .slide
+    & div
+      padding: 15px 5px 15px 5px
+      width: 90%
+    & p
+      width: 130px
+      font-size: 13px
+  .slide
+    &.active
+      & h3
+        width: 140px
+        top: 40px
+        font-size: 14px
+@media (max-width: 330px)
+  .slide
+    &.active
+      & h3
+        width: 130px
+        top: 40px
+        font-size: 13px

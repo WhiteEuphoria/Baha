@@ -2,8 +2,11 @@
   display: none
   width: 30px
   height: 20px
-  position: relative
+  position: fixed
+  top: 30px
+  right: 30px
   cursor: pointer
+  z-index: 99
   &::after
     content: ''
     background-color: #fff
@@ -22,30 +25,76 @@
     height: 1.5px
     left: 0
     transition: 0.5s
-    &--active
-      &::before
-        transform: rotate(45deg)
-        top: 9px
-        transition: 0.5s
-        &::after
-          transform: rotate(-45deg)
-          bottom: 9px
-          transition: 0.5s
+  &--active
+    &::before
+      transform: rotate(45deg)
+      top: 9px
+      transition: 0.5s
+    &::after
+      transform: rotate(-45deg)
+      bottom: 9px
+      transition: 0.5s
+.menu--visible
+  display: block
+  position: fixed
+  left: 0
+  top: 0
+  width: 100vw
+  height: 100vh
+  z-index: 1
+  background: rgba(0, 0, 0, 0.9)
+  animation: vis 1.5s forwards
+
+.unvis
+  display: none
 .wrp
   position: absolute
   right: 30px
   top: 40px
   z-index: 99
+
 @media (max-width: 1024px)
   .burger
     display: block
-    // margin-left: 790px
-    // margin-top: 40px
-// @media (max-width: 1000px)
-//   .burger
-//     margin-left: 750px
-
-// @media (max-width: 970px)
-//   .burger
-//     display: block
-//     margin-left: 720px
+  .nav-menu
+    display: flex
+    flex-direction: column
+    // text-align: center
+    align-items: center
+    position: static
+    margin-top: 115px
+    margin-left: 0
+    padding: 0
+    &__item
+      color: white
+      animation: ani 1s forwards
+      & a
+        line-height: 4
+        &:hover
+          display: block
+          width: 100vw
+          background-color: rgba(255,255 ,255 ,0.4 )
+          text-decoration: none
+          text-align: center
+      &--time
+        display: block
+        width: 90px
+        text-align: center
+        font-size: 13px
+        font-family: 'Verdana-Regular'
+      &--services
+        color: white
+        margin: 0
+      &--geo
+        color: white
+        margin: 0
+      &--tel
+        margin: 0
+        display: flex
+        & img
+        & span
+          margin-left: 11px
+  .fixed
+    position: fixed
+    z-index: 99
+    animation: vis 3s forwards

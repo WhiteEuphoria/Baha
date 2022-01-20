@@ -22,6 +22,7 @@
       overflow: hidden
       width: 100%
       height: 100vh
+
     &--sidebar
       height: 100%
       width: 35%
@@ -52,16 +53,6 @@
         color: #FFFFFF
         margin-bottom: 125px
         font-family: 'NotoSerif-Regular'
-      & a
-        background: #FFFFFF
-        box-shadow: 35px 5px 40px rgba(255, 255, 255, 0.35)
-        border-radius: 15px
-        padding: 10px 37px 10px 37px
-        color: rgba(190, 0, 0, 0.8)
-        font-size: 17px
-        line-height: 133.69%
-        font-family: 'Verdana-Bold'
-
     &--main-slide
       height: 100%
       position: absolute
@@ -72,7 +63,7 @@
       & > div
         background-repeat: no-repeat
         background-size: cover
-        background-position: center center
+        background-position: center
         height: 100%
         width: 100%
     &--down-button
@@ -99,7 +90,19 @@
     & img
       width: 30px
       height: 30px
-.items
+  &__btn
+    display: none
+  &__adaptive-buttons
+    display: none
+.btn
+  background: #FFFFFF
+  box-shadow: 35px 5px 40px rgba(255, 255, 255, 0.35)
+  border-radius: 15px
+  padding: 10px 37px 10px 37px
+  color: rgba(190, 0, 0, 0.8)
+  font-size: 17px
+  line-height: 133.69%
+  font-family: 'Verdana-Bold'
 
 .slider-button
   background: #312D24
@@ -122,7 +125,7 @@
 .img
   object-fit: cover
   width: 100%
-  // height: 100vh
+  height: 100vh
 
 .img-up
   background: url('../img/button/up.svg') no-repeat
@@ -135,15 +138,13 @@
 
 //NAV
 .nav-menu
-  margin-top: 50px
   display: flex
-  // justify-content: space-between
   font-size: 15px
   color: white
-  // position: relative
-  // left: 200px
-  margin-left: 200px
-
+  position: absolute
+  top: 50px
+  right: 80px
+  z-index: 99
   &__item
     color: white
     &--time
@@ -152,23 +153,17 @@
       text-align: center
       font-size: 13px
       font-family: 'Verdana-Regular'
-
     &--services
       color: white
       margin-left: 460px
     &--geo
       color: white
       margin-left: 30px
-
     &--tel
       margin-left: 90px
       display: flex
       & img
-        // float: left
-        // margin-left: 80px
-        // vertical-align: top
       & span
-        // vertical-align: middle
         margin-left: 11px
 
 .color

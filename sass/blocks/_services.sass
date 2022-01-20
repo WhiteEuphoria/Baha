@@ -1,13 +1,14 @@
 .services
   // margin-top: 60px
   font-family: 'Verdana-Bold'
+  margin-bottom:
   &--wrapper
     height: 100vh
   &--bg
     background: url('../img/services--bg.png') no-repeat
     width: 100%
     height: 200px
-    margin-bottom: 30px
+    margin-bottom: 50px
     background-size: cover
   &__width
     padding-top: 20px
@@ -30,9 +31,12 @@
 
 .container
   margin-top: 40px
-  width: 100%
+  padding-top: 40px
   display: flex
   padding: 0 20px
+  justify-content: center
+  align-items: center
+  width: 100%
 
 .slide
   width: 100%
@@ -43,6 +47,7 @@
   color: white
   object-fit: cover
   flex: 1
+  // flex-basis: 100px
   // background-size: cover
   background-position: center
   background-repeat: no-repeat
@@ -52,44 +57,104 @@
   position: relative
 
 .slide
+  & img
+    filter: blur(2px)
   & h3
     position: absolute
     font-size: 22px
-    width: 100%
-    left: 10%
+    width: 200px
+    left: -50px
     top: 150px
     margin: 0
     opacity: 1
     transform: rotate(90deg)
-  & p
+  & div
     position: absolute
-    font-size: 20px
-    top: 150px
+    top: 200px
+    left: 10%
+    width: 50%
+    background: linear-gradient(109.64deg, #000000 -7.49%, rgba(0, 0, 0, 0) 132.23%)
+    box-shadow: 14px -14px 31px -5px rgba(0, 0, 0, 0.25)
+    display: flex
+    justify-content: space-between
+    // flex-direction: column
+    padding: 37px 50px 37px 50px
+    display: none
+    border-radius: 0 0px 15px 15px
+    animation: vis 3s forwards
+    // border: 0.1px solid red
+    // z-index: 1
+  & h5
+    font-family: 'Verdana-Regular'
+    position: absolute
+    font-size: 15px
+    top: 145px
     left: 10%
     margin: 0
-    // display: none
-    opacity: 0
-    font-family: 'Verdana-Regular'
+    // opacity: 0
+    display: none
 
+  & p
+    display: block
+    // position: absolute
+    font-size: 19px
+    // top: 200px
+    // left: 10%
+    margin: 0
+    font-family: 'Verdana-Regular'
+    // opacity: 0
+    // padding-bottom: 30px
+    display: none
+    width: 260px
+
+  & span
+    background: rgba(0, 0, 0, 0.6)
+    border-radius: 5px
+    width: 90px
+    font-size: 16px
+    line-height: 27px
+    margin: 0
+    display: none
+    background: linear-gradient(109.64deg, #000000 -7.49%, rgba(0, 0, 0, 0) 132.23%)
+    box-shadow: 14px -14px 31px -5px rgba(0, 0, 0, 0.25)
+    // width: 30%
+    text-align: center
+    padding: 12px 10px 12px 10px
+    // &:last-child
+    //   width: 60%
+// .red
+//   color: red
 .slide
   &.active
     flex: 10
+    // flex-basis: 900px
 
 .slide
   &.active
     & h3
       opacity: 1
-      // left: 0
-      transition: opacity 0.3s ease-in 0.4s
+      animation: vis 1s forwards
       transform: rotate(0deg)
       top: 90px
       left: 10%
-      // border-bottom: 3px solid red
       border-left: 3px solid red
       padding-bottom: 4px
       padding-left: 7px
+    & h5
+      animation: vis 1.5s forwards
+      display: inline
+      // opacity: 1
+      transition: opacity 0.3s ease-in 0.4s
+    & div
+      display: flex
     & p
+      display: inline
       // display: block
-      opacity: 1
+      // display: block
+      // opacity: 1
       transition: opacity 0.3s ease-in 0.4s
       // transition: ease-in 0.4s
+    & span
+      display: inline
+      // opacity: 1
+      transition: opacity 0.3s ease-in 0.4s
